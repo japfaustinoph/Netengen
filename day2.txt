@@ -69,3 +69,145 @@ subnet 10.0.64.0/18
 254
 155
 not yours 10.0.128.0/18
+@d1
+conf t
+vlan 11
+name 1500wfh
+exit
+int vlan 11
+no shut
+ip address 172.16.8.1 255.255.248.0
+exit
+ip dhcp excluded-add 172.16.8.1 172.16.8.100
+ip dhcp pool 1500WFH
+Network 172.16.8.0 255.255.248.0
+DEFAULT-ROUTER 172.16.8.1
+End
+
+A1
+conf t
+interface e0/0
+no shut
+switchport access vlan 11
+do sh vlan brief
+
+p1
+conf t
+int e0/0
+no shutdown
+ip address dhcp
+do bp
+
+########################## d1 a2 p3 #####################################
+p
+conf t
+vlan 11
+name 1500wfh
+exit
+int vlan 6
+no shut
+ip address 172.16.0.65 255.255.255.192
+exit
+ip dhcp excluded-add 172.16.0.65 172.16.0.69
+ip dhcp pool 50wfh
+Network 172.16.0.64 255.255.255.192
+DEFAULT-ROUTER 172.16.0.65
+End
+
+A1
+interface e1/0
+no shut
+switchport access vlan 11
+do sh vlan brief
+
+p2
+conf t
+int e1/0
+no shutdown
+ip address dhcp
+do bp
+
+
+task 4 real world design and implementify
+ITS Network Design, D1, D2, S2
+ACCenture 10.0.0.0/8 8500 cc agents
+for subnet:
+c 8500/14b
+s -32 = 18
+i 3d s64
+subnet 10.0.64.0/18
+64
+254
+155
+not yours 10.0.128.0/18
+@d1
+conf t
+vlan 11
+name 1500wfh
+exit
+int vlan 11
+no shut
+ip address 172.16.8.1 255.255.248.0
+exit
+ip dhcp excluded-add 172.16.8.1 172.16.8.100
+ip dhcp pool 1500WFH
+Network 172.16.8.0 255.255.248.0
+DEFAULT-ROUTER 172.16.8.1
+End
+
+A1
+conf t
+interface e0/0
+no shut
+switchport access vlan 11
+do sh vlan brief
+
+p1
+conf t
+int e0/0
+no shutdown
+ip address dhcp
+do bp
+
+########################## d1 a2 p3 #####################################
+p
+conf t
+vlan 11
+name 1500wfh
+exit
+int vlan 6
+no shut
+ip address 172.16.0.65 255.255.255.192
+exit
+ip dhcp excluded-add 172.16.0.65 172.16.0.69
+ip dhcp pool 50wfh
+Network 172.16.0.64 255.255.255.192
+DEFAULT-ROUTER 172.16.0.65
+End
+
+A1
+interface e1/0
+no shut
+switchport access vlan 11
+do sh vlan brief
+
+p2
+conf t
+int e1/0
+no shutdown
+ip address dhcp
+do bp
+
+
+task 4 real world design and implementify
+ITS Network Design, D1, D2, S2
+ACCenture 10.0.0.0/8 8500 cc agents
+for subnet:
+c 8500/14b
+s -32 = 18
+i 3d s64
+subnet 10.0.64.0/18
+64
+254
+155
+not yours 10.0.128.0/18
