@@ -53,7 +53,7 @@ RivanSolution (CAI) convert, add, ifinger
 7	-0111
 6	-0110
 5	-0101
-4	-111
+4	-0100
 3	-0101
 2	-0010
 1 	-0001
