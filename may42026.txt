@@ -72,20 +72,6 @@ ifinger
 2001:4455:9299:1000::
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###############################################
 2 rules
 	1st: the 3 rules of routing
@@ -94,8 +80,8 @@ ifinger
 		wrong Ip add
 			cmd:route print: to check ip
 		physical problem
-	2nd:route not dikit
-	
+	2nd: route not dikit
+	3rd: remember 1and 2
 	
 ################################################
 	2001:fd8:750::/48 subnet to 64 offices
@@ -106,5 +92,10 @@ ifinger
 	2001:fd8:750:0000::/54
 	2001:fd8:750:0400::/54
 	2001:fd8:750:0800::61
+	
+	######################
+	jira
+	serviceno
+	freshdesk
 	
 	
