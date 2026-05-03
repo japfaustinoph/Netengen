@@ -58,3 +58,40 @@ RivanSolution (CAI) convert, add, ifinger
 2	-0010
 1 	-0001
 0	-0000
+
+
+#################################################
+task3
+subnet pldt 2001:4455:9299:48::/48 into 1024 office
+convert 1024 =2r
+add
+ifinger
+
+2001:4455:9299:48:1c00::/58
+
+2001:4455:9299:1000::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################
+2 rules
+	1st: the 3 rules of routing
+		rule 1 ping the dikit always
+		*trouble shoot
+		wrong Ip add
+			cmd:route print: to check ip
+		physical problem
+	2nd:route not dikit
