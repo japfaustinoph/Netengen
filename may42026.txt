@@ -1,1 +1,17 @@
+ip add
+multi natio companies
+10.0.0.0/8 skyes will hae a small cc:
+1800 agents, Tls.
+1800 is 11 bits, /32-=/21, 3rd,8i, Ipasok 8 is a 3rd i
+Network
+
+
+Method Convert,subtract ipasok
+
+1st: 10.0.8.0/21
+Last usable
+Bunso 
+Noturs
+11k bits
+10.0.0
 
