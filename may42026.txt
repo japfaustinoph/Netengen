@@ -99,3 +99,51 @@ ifinger
 	freshdesk
 	
 	
+	5 ways to route
+	s
+	eigrp
+	ospf
+	bgp
+	vpn
+	
+	(p1,p2)end point - client facing device
+		-static route
+	
+	(a1-a2)Access switch
+		-static route
+		-routing to distribution switch
+		
+	Eigrp all cisco devices
+	
+	Palo Alto
+	
+	Cisco
+	-Fire Power
+	
+	OSPF
+	
+	
+	
+	##################################################
+	static Route:
+	
+	ip route 10.1.1.8 225.225.225.252 null 0
+	
+	172.16.50.5/20
+	172.16.48.0 255.255.240.0 null 0
+	
+	192.168.1.100/27
+	192.168.1.96 225.255.225.224 null 0
+	
+	type
+	router eigrp 100
+	network""
+	network 10.1.1.4 0.0.0.3
+	
+	192.168.1.100/27
+	network 192.168.1.96 0.0.0.31
+	
+	Gateway
+	default gateway
+	gateway of last resort
+	
