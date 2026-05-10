@@ -68,6 +68,171 @@ end
 
 
 
-#######################FREe fortinet exam##################################
+#######################FREe fortinet nSE exam##################################
+ICASA
+Cisco free online ethical hacking course
 
 
+######################cisco web server############################################
+
+www.thepiratebay.org   162.159.0.0     104.21.0.0
+www.limetorrents.com    172.67.0.0.   84.32.0.0
+www.freeanimeonline.com   76.223.0.0.  13.248.0.0.
+www.torlock2.com   104.21.0.0
+www.hentaisites.com 104.21.0.0   
+www.iptorrents.com  104.26.0.0.   95.211.0.0
+
+
+
+config t
+NO ip access-list standard NOTORS
+ip access-list standard NOTORS
+DENY   162.159.0.0  0.0.255.255
+DENY   104.21.0.0  0.0.255.255
+DENY   172.67.0.0   0.0.255.255
+DENY   84.32.0.0   0.0.255.255
+DENY   76.223.0.0   0.0.255.255
+DENY   13.248.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.26.0.0   0.0.255.255
+DENY   104.26.0.0   0.0.255.255
+DENY 95.211.0.0 0.0.255.255
+
+Permit Any
+Int Gi 1
+ ip access-group NOTORS in
+end
+
+
+
+-EEE-
+conf t
+int gi 1	
+no ip access-group NOTORS IN
+
+276-302
+
+config t
+int Gi 3
+ no shut
+ ip add 192.168.103.11 255.255.255.0
+ ip add 192.168.103.10 255.255.255.0 Secondary
+service finger
+service tcp-small-servers
+service udp-small-servers
+ip dns server
+ip http server
+ip http secure-server
+telephony-service
+max-ephone 2
+max-dn 4
+ip source-address 192.168.103.11 port 2000
+voice service voip
+ allow-connections sip to sip
+ sip
+   registrar server expires max 600 min 60
+ voice register global
+  mode cme
+  source-address 192.168.103.11 port 5060
+  max-dn 12
+  max-pool 12
+!Make Ping EASY
+ip host bet10.com 192.168.103.10
+ip host bet11.com 192.168.103.11
+
+
+#############################################################
+Config t
+
+NO IP access-list Extended NGFW1
+IP access-list Extended NGFW1
+ Permit tcp Any host bet10.com eq 80 log
+ Permit tcp Any host bet10.com eq 443 log
+ Permit icmp Any host bet10.com log
+ Permit tcp Any host bet11.com eq 53 log
+ Permit tcp Any host bet11.com eq 443 log
+ Permit tcp Any host bet11.com eq 22 log
+ Int Gi 3
+  ip access-group NGFW1 in
+  
+##################REMOVE FIREWALL:###########
+
+Conf t
+ Int Gi 3
+  NO ip access-group NGFW2 in
+end
+
+modify ####################################
+bet10.com open/bukas dns ssh
+bet11.com open/bukas https http
+
+conf t
+NO IP access-list Extended NGFW1
+IP access-list Extended NGFW1
+ Permit tcp Any host bet10.com eq 53 log
+ Permit tcp Any host bet10.com eq 22 log
+ Permit tcp Any host bet11.com eq 443 log
+ Permit tcp Any host bet11.com eq 80 log
+ Int Gi 3
+  ip access-group NGFW1 in
+  
+  
+  Game ############### 
+  make ngfw3
+  bet10.com 
+  allow sccp, sip, h323 
+  bet 11
+  ssh dns, http, https
+  
+  conf t
+NO IP access-list Extended NGFW3
+IP access-list Extended NGFW3
+ Permit tcp Any host bet10.com eq 2000 log
+ Permit tcp Any host bet10.com eq 5060 log
+ Permit tcp Any host bet10.com eq 1720 log
+ 
+ Permit tcp Any host bet11.com eq 22 log
+ Permit tcp Any host bet11.com eq 80 log
+  Permit tcp Any host bet11.com eq 53 log
+   Permit tcp Any host bet11.com eq 443 log
+ Int Gi 3
+  ip access-group NGFW1 in
+  
+  
+  ##################################
+  bet10 - https
+  bet11 - https
+  
+    conf t
+NO IP access-list Extended NGFW4
+IP access-list Extended NGFW4
+ Permit tcp Any host bet10.com eq 443 log
+ Permit tcp Any host bet11.com eq 443 log
+ Int Gi 3
+  ip access-group NGFW4 in
+  
+  
+    ##################################
+	telnet ssh http
+	ssh https
+	
+	    conf t
+NO IP access-list Extended iwashulishirt
+IP access-list Extended iwashulishirt
+ Permit tcp Any host bet10.com eq 23 log
+ Permit tcp Any host bet10.com eq 80 log
+  Permit tcp Any host bet10.com eq 22 log
+   Permit tcp Any host bet11.com eq 22 log
+ Permit tcp Any host bet11.com eq 443 log
+ Int Gi 3
+  ip access-group iwashulishirt in
+
+
+##########################################
+docker container-
+ -kubernetes -
+
+
+#########################################
+install docker linux on windows 11
