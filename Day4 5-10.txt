@@ -1,1 +1,29 @@
+cmd
+netstat - ano
+
+how an attack happens: 3 way handshake
+Hacker			Victim
+----------------SYN------->
+<------------ACK---------------
+------Syn/ACK------>
+------Established State---------
+
+72-92 github day 4
+
+protocol hacker victim port
+
+
+adobo
+sti
+pass
+
+-------------pentest --------------
+
+admin
+pass 
+sudo su
+apt install openssh-server
+systemctl enable ssh
+systemctl start ssh
+systemctl status ssh
 
