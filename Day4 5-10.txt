@@ -65,3 +65,9 @@ Int Gi 1
  ip access-group NOTORS in
 end
 
+
+
+
+#######################FREe fortinet exam##################################
+
+
