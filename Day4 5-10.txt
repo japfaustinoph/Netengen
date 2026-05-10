@@ -10,9 +10,15 @@ Hacker			Victim
 
 72-92 github day 4
 
+------------------------------------
+
+attack
+
+ net use x: \\10.41.1.10\c$
+--------------------------------
 protocol hacker victim port
 
-
+--------------------------------------
 adobo
 sti
 pass
