@@ -23,7 +23,7 @@ adobo
 sti
 pass
 
--------------pentest --------------
+------------- Vmware --- pentest --------------
 
 admin
 pass 
@@ -32,4 +32,36 @@ apt install openssh-server
 systemctl enable ssh
 systemctl start ssh
 systemctl status ssh
+
+
+
+------------ blocking sites---------
+
+www.thepiratebay.org   162.159.0.0     104.21.0.0
+www.limetorrents.com    172.67.0.0.   84.32.0.0
+www.freeanimeonline.com   76.223.0.0.  13.248.0.0.
+www.torlock2.com   104.21.0.0
+www.hentaisites.com 104.21.0.0   
+www.iptorrents.com  104.26.0.0.   95.211.0.0
+
+
+
+config t
+NO ip access-list standard NOTORS
+ip access-list standard NOTORS
+DENY   162.159.0.0  0.0.255.255
+DENY   104.21.0.0  0.0.255.255
+DENY   172.67.0.0   0.0.255.255
+DENY   84.32.0.0   0.0.255.255
+DENY   76.223.0.0   0.0.255.255
+DENY   13.248.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.26.0.0   0.0.255.255
+DENY   104.26.0.0   0.0.255.255
+DENY 95.211.0.0 0.0.255.255
+Permit Any
+Int Gi 1
+ ip access-group NOTORS in
+end
 
