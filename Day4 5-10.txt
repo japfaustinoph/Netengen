@@ -236,3 +236,12 @@ docker container-
 
 #########################################
 install docker linux on windows 11
+
+###########################################
+how to fix pass on crt
+conf t 
+line vty 0 14
+login local 
+exec-timeout 0 0 
+end
+############################################
