@@ -1,0 +1,45 @@
+Day 5
+Cisco Switch Protocols
+starts with 802.1 (standards)
+802.1/q - Trunking
+802.1/Darna - STP (Spanning Tree Protocol
+)
+802.1/Wonderwoman - R STP
+802.1/superman - MST 
+802.1/x-men - Port Security
+-
+
+
+config t
+NO spanning-tree vlan 1-999
+end
+-------------------------------------
+config t
+ spanning-tree vlan 1-999
+end
+-------------------------------------
+conf t
+spanning-tree vlan 1-100 root primary
+do sh spanning-tree vlan1
+
+----------------------------------------
+conf t
+int range f0/1-9
+
+switchport mode access
+switchport access vlan 1
+
+sh vlan b
+--------------------------
+
+conf t
+no vlan 2
+end
+
+conf t 
+name vlan 2
+exit
+-------------------------------
+
+
+
