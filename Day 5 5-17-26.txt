@@ -50,3 +50,13 @@ wonderwoman
 
 show int status err
 
+conf t
+int range fa0/5-7
+shut
+no shut
+end
+
+
+
+---------------------
+
