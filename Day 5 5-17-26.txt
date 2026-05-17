@@ -45,5 +45,8 @@ cisco syntax test/exam
 peoe?
 IEEE 802.3ad 
 
+-----------------------
+wonderwoman
 
+show int status err
 
