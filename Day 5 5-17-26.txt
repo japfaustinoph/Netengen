@@ -41,5 +41,9 @@ name vlan 2
 exit
 -------------------------------
 
+cisco syntax test/exam
+peoe?
+a2aer.3?
+
 
 
